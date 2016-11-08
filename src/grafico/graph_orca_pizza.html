@@ -19,12 +19,12 @@ function main() {
         {
             value: sec,
             color:"#F7464A",
-            label: 'SEC'
+            label: 'Orçamento SEC'
         },
         {
             value : (100-sec),
             color : "#69D2E7",
-            label: 'Outros'
+            label: 'Orçamento do Executivo (outras secretarias)'
         }
     ];
 
@@ -37,7 +37,7 @@ function main() {
 </script>
 </head>
 <body>
-<h1>Gr&aacute;fico de Or&ccedil;amento</h1>
+<h1>Percentual do orçamento da SEC em comparação ao orçamento total do executivo do Estado do Rio de Janeiro</h1>
 <div>
     <canvas id="pieChart" width="600" height="400"></canvas>
     <div id="pieLegend"></div>
