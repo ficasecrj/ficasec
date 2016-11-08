@@ -4164,11 +4164,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
 }
 .navbar {
-  position: relative;
-  min-height: 50px;
+  position: fixed;
+  min-height: 400px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
+
+.col-md-12.logo {
+    text-align: center;
+}
+
 @media (min-width: 768px) {
   .navbar {
     border-radius: 4px;
@@ -4589,8 +4594,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
-  border-color: #080808;
+  background-color: #16368b;
+  border-color: #16368b;
 }
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;
@@ -6238,7 +6243,7 @@ button.close {
   position: relative;
 }
 .carousel-inner {
-  position: relative;
+  position: absolute;
   width: 100%;
   overflow: hidden;
 }
