@@ -4176,7 +4176,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .col-md-12.rede_social {
     text-align: right;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 @media (min-width: 768px) {

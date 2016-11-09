@@ -19,10 +19,11 @@
 .navbar-nav {
 	width: 100% !important;
 	max-width: 100%;
+	margin-top: 30px;
 }
 .navbar {
   position: fixed;
-  min-height: 250px;
+  min-height: 200px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -35,15 +36,16 @@ ul.nav li a {
 	font-size: 30px;
 	color: #fff !important;
 }
-.logo p {
+.logo a {
 	font-family: 'effra';
 	font-size: 70px;
 	color: #fff;
 	margin-top: 10px;
+	text-decoration: none;
 }
-.logo p span {
+.logo a span {
 	color: #fcfc08;
 }
-.logo p span.tag {
+.logo a span.tag {
 	color: #5d93f3;
 }
