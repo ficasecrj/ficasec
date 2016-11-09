@@ -76,7 +76,7 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container container-full">
 
         <!-- Marketing Icons Section -->
         <div class="row">
@@ -228,7 +228,96 @@
 
         jQuery(document).ready(function(){
 
-            jQuery("#gallery").unitegallery();
+            jQuery("#gallery").unitegallery({
+                    theme_enable_preloader: true,       //enable preloader circle
+                    gallery_theme: "tiles",              //choose gallery theme (if more then one themes includes)
+                    gallery_width:"100%",               //gallery width
+                    gallery_min_width: 150,             //gallery minimal width when resizing
+                    gallery_background_color: "",       //set custom background color. If not set it will be taken from css.
+                         // tiles_type:"nested",   
+                    //tiles options:
+                    // tiles_col_width: 100,                   //column width - exact or base according the settings
+                    tiles_align:"center",                   //align of the tiles in the space
+                    tiles_space_between_cols: 0,            //space between images
+                    tiles_exact_width: false,               //exact width of column - disables the min and max columns
+                    tiles_space_between_cols: 0,            //space between images
+                    tiles_space_between_cols_mobile: 0,     //space between cols for mobile type
+                    tiles_include_padding: false,            //include padding at the sides of the columns, equal to current space between cols
+                    tiles_min_columns: 2,                   //min columns
+                    tiles_max_columns: 0,                   //max columns (0 for unlimited)
+                    
+                    tiles_set_initial_height: false,         //columns type related only
+                    tiles_enable_transition: true,          //enable transition when screen width change
+                    tile_enable_border:false,           //enable border of the tile
+                    tile_border_width:0,                //tile border width
+                    tile_border_color:"#F0F0F0",        //tile border color
+                    tile_border_radius:0,               //tile border radius (applied to border only, not to outline)
+                    
+                    tile_enable_outline: false,         //enable outline of the tile (works only together with the border)
+                    tile_outline_color: "#8B8B8B",      //tile outline color
+                    
+                    tile_enable_shadow:false,            //enable shadow of the tile
+                    tile_shadow_h:1,                    //position of horizontal shadow
+                    tile_shadow_v:1,                    //position of vertical shadow
+                    tile_shadow_blur:3,                 //shadow blur
+                    tile_shadow_spread:2,               //shadow spread
+                    tile_shadow_color:"#8B8B8B",        //shadow color
+                    
+                    tile_enable_action: true,           //enable tile action on click like lightbox
+                    tile_as_link: false,                //act the tile as link, no lightbox will appear
+                    tile_link_newpage: true,            //open the tile link in new page
+        
+                    tile_enable_overlay: true,          //enable tile color overlay (on mouseover)
+                    tile_overlay_opacity: 0.4,          //tile overlay opacity
+                    tile_overlay_color: "#000000",      //tile overlay color
+                    
+                    tile_enable_icons: true,            //enable icons in mouseover mode
+                    tile_show_link_icon: false,         //show link icon (if the tile has a link). In case of tile_as_link this option not enabled
+                    tile_space_between_icons: 5,       //initial space between icons, (on small tiles it may change)
+                    tiles_type: "justified",            //must option for the tiles - justified type
+                    tiles_justified_row_height: 100,    //base row height of the justified type
+                    tiles_justified_space_between: 0,   //space between the tiles justified type
+                    tile_enable_image_effect:true,     //enable tile image effect
+                    tile_image_effect_type: "blur",       //bw, blur, sepia - tile effect type
+                    tile_image_effect_reverse: true,   //reverce the image, set only on mouseover state
+                    
+                    //tile text panel options:
+                    
+                    tile_enable_textpanel: false,           //enable textpanel
+                    tile_textpanel_source: "title",         //title,desc,desc_title. source of the textpanel. desc_title - if description empty, put title
+                    tile_textpanel_always_on: true,        //textpanel always visible
+                    tile_textpanel_appear_type: "fade",    //slide, fade - appear type of the textpanel on mouseover
+                    tile_textpanel_position:"inside_bottom", //inside_bottom, inside_top, inside_center, top, bottom the position of the textpanel
+                    tile_textpanel_offset:0,                //vertical offset of the textpanel
+                    
+                    tile_textpanel_padding_top:0,           //textpanel padding top 
+                    tile_textpanel_padding_bottom:0,        //textpanel padding bottom
+                    tile_textpanel_padding_right: 0,       //cut some space for text from right
+                    tile_textpanel_padding_left: 0,        //cut some space for text from left
+                    tile_textpanel_bg_opacity: 0.4,         //textpanel background opacity
+                    tile_textpanel_bg_color:"#000000",      //textpanel background color
+                    tile_textpanel_bg_css:{},               //textpanel background css
+                    
+                    tile_textpanel_title_color:null,         //textpanel title color. if null - take from css
+                    tile_textpanel_title_font_family:null,   //textpanel title font family. if null - take from css
+                    tile_textpanel_title_text_align:null,    //textpanel title text align. if null - take from css
+                    tile_textpanel_title_font_size:null,     //textpanel title font size. if null - take from css
+                    tile_textpanel_title_bold:null,          //textpanel title bold. if null - take from css
+                    tile_textpanel_css_title:{},             //textpanel additional css of the title
+        
+                    tile_textpanel_desc_color:null,          //textpanel description font family. if null - take from css
+                    tile_textpanel_desc_font_family:null,    //textpanel description font family. if null - take from css
+                    tile_textpanel_desc_text_align:null,     //textpanel description text align. if null - take from css
+                    tile_textpanel_desc_font_size:null,      //textpanel description font size. if null - take from css
+                    tile_textpanel_desc_bold:null,           //textpanel description bold. if null - take from css
+                    tile_textpanel_css_description:{},       //textpanel additional css of the description
+                    
+                    //lightbox options:
+                    
+                    lightbox_type: "wide",                          //compact / wide - lightbox type
+                    lightbox_hide_arrows_onvideoplay: false,         //hide the arrows when video start playing and show when stop
+                    lightbox_arrows_position: "sides",              //sides, inside: position of the arrows, used on compact type        
+            });
 
         });
         
@@ -238,7 +327,9 @@
             </div>
         </div>
         <!-- /.row -->
+    </div>
 
+    <div class="container">
         <!-- Portfolio Section -->
         <div class="row">
             <div class="col-lg-12">

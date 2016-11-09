@@ -6,6 +6,17 @@
 	font-style: normal;
 }
 
+ body {
+    padding-top: 70px;
+  }
+
+.container-full {
+	margin: 0 auto;
+	width: 100%;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
 .navbar {
   position: fixed;
   min-height: 250px;
